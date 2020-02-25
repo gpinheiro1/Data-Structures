@@ -15,6 +15,10 @@ public class Main {
 		case 1:
 			fazerGerenciamentoMemoria();
 			break;
+
+			case 2:
+				fazerVetor();
+				break;
 		}
 		scanner.close();
 	}
@@ -43,4 +47,16 @@ public class Main {
 
 	}
 
+	private static void fazerVetor() {
+		Pessoa [] vetorPessoas = new Pessoa[3]; //vetores são alocados na heap por conta da complexidade dos mesmos.
+		vetorPessoas[0] = new Pessoa(3, "Jimi Hendrix no vetor"); //vetores grandes demais poderiam estourar a stack.
+		System.out.println(vetorPessoas[0].getNome());
+		int [] vetorInteiros = new int [3];
+		System.out.println("O valor padrão para inteiros quando não foram inicializados: " + vetorInteiros[0]);
+		boolean [] vetorBooleans = new boolean[3];
+		System.out.println("O valor padrão para booleanos quando não foram inicializados: " + vetorBooleans[0]);
+		String [] vetorString = new String[3];
+		System.out.println("O valor padrão para strings quando não foram inicializadas: " + vetorString[0]);
+
+	}
 }
