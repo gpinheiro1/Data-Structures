@@ -3,6 +3,7 @@ package br.com.treinaweb.estruturadados.main;
 import java.util.Scanner;
 
 import br.com.treinaweb.estruturadados.modelos.Pessoa;
+import br.com.treinaweb.estruturadados.vetores.Vetor;
 
 public class Main {
 
@@ -48,11 +49,21 @@ public class Main {
 	}
 
 	private static void fazerVetor() {
-		Pessoa [] vetorPessoas = new Pessoa[3]; //vetores são alocados na heap por conta da complexidade dos mesmos.
-		vetorPessoas[0] = new Pessoa(3, "Jimi Hendrix no vetor"); //vetores grandes demais poderiam estourar a stack.
-		System.out.println(vetorPessoas[0].getNome());
-		int [] vetorInteiros = new int [3];
-		System.out.println("O valor padrão para inteiros quando não foram inicializados: " + vetorInteiros[0]);
+
+		//utilizacao de generics
+		Vetor<Pessoa> vetorPessoas = new Vetor<Pessoa>(3); //vetores são alocados na heap por conta da complexidade dos mesmos.
+		vetorPessoas.inserirEm(0, new Pessoa(1,"Jimi Hendrix no vetor")); //vetores grandes demais poderiam estourar a stack.
+		System.out.println(vetorPessoas.recuperar(0));
+
+		//exemplo com inteiros
+		Vetor<Integer> vetorInteiros = new Vetor<Integer>(2);
+		vetorInteiros.inserirEm(0, 2020);
+		System.out.println(vetorInteiros.recuperar(0));
+
+
+		//testes de inicialização
+		int [] vetorInteiro = new int [3];
+		System.out.println("O valor padrão para inteiros quando não foram inicializados: " + vetorInteiro[0]);
 		boolean [] vetorBooleans = new boolean[3];
 		System.out.println("O valor padrão para booleanos quando não foram inicializados: " + vetorBooleans[0]);
 		String [] vetorString = new String[3];

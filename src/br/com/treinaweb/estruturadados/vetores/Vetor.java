@@ -2,18 +2,18 @@ package br.com.treinaweb.estruturadados.vetores;
 
 import br.com.treinaweb.estruturadados.modelos.Pessoa;
 
-public class Vetor {
-    private Pessoa [] pessoas;
+public class Vetor<T> {
+    private Object [] elementos;
 
     public Vetor (int capacidade) {
-        this.pessoas = new Pessoa[capacidade];
+        this.elementos = new Object[capacidade];
     }
 
-    public void inserirEm(int posicao, Pessoa pessoa) {
-        this.pessoas[posicao] = pessoa;
+    public void inserirEm(int posicao, T elementos) {
+        this.elementos[posicao] = elementos;
     }
 
-    public Pessoa recuperar(int posicao) {
-        return this.pessoas[posicao];
+    public T recuperar(int posicao) {
+        return (T)this.elementos[posicao];
     }
 }

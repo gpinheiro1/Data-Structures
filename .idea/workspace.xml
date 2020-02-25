@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89ab381e-710e-4374-84b6-44d1363028ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/treinaweb/estruturadados/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/treinaweb/estruturadados/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/treinaweb/estruturadados/vetores/Vetor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/treinaweb/estruturadados/vetores/Vetor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582207205650</updated>
       <workItem from="1582207217748" duration="11753000" />
-      <workItem from="1582584280665" duration="2663000" />
+      <workItem from="1582584280665" duration="5367000" />
     </task>
     <servers />
   </component>
