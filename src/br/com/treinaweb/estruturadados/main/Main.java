@@ -52,8 +52,13 @@ public class Main {
 
 		//utilizacao de generics
 		Vetor<Pessoa> vetorPessoas = new Vetor<Pessoa>(3); //vetores são alocados na heap por conta da complexidade dos mesmos.
-		vetorPessoas.inserirEm(0, new Pessoa(1,"Jimi Hendrix no vetor")); //vetores grandes demais poderiam estourar a stack.
-		System.out.println(vetorPessoas.recuperar(0));
+		vetorPessoas.inserir(new Pessoa(0,"Jimi Hendrix no vetor")); //vetores grandes demais poderiam estourar a stack.
+		vetorPessoas.inserir(new Pessoa(1, "BB King no vetor"));
+		vetorPessoas.inserir(new Pessoa(2, "Jimmy page no vetor"));
+		vetorPessoas.inserir(new Pessoa(3, "Joe Satriani no vetor"));
+		vetorPessoas.inserir(new Pessoa(4, "Eric Clapton no vetor"));
+		vetorPessoas.inserirEm(2, new Pessoa(5, "Tom Morello no vetor"));
+		System.out.println(vetorPessoas);
 
 		//exemplo com inteiros
 		Vetor<Integer> vetorInteiros = new Vetor<Integer>(2);
