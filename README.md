@@ -1,2 +1,2 @@
-# Estrutura-de-Dados
+# Data Structures
 repo dedicated to learn data structures and algoritms
