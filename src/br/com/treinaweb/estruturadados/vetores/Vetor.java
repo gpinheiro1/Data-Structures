@@ -1,6 +1,7 @@
 package br.com.treinaweb.estruturadados.vetores;
 
 import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class Vetor<T> {
     private Object [] elementos;
@@ -29,6 +30,7 @@ public class Vetor<T> {
         this.posicao++;
     }
 
+    //esse método permite a expansão de um vetor caso seja necessário
     public void inserirEm(int posicao, T elementos) {
         if(posicao > this.elementos.length)
             throw new IllegalArgumentException(String.format("A posição [%d] é invalida", posicao));
@@ -56,7 +58,31 @@ public class Vetor<T> {
         }
     }
 
+    public boolean contem (T elemento) {
+        for(int i = 0; i < tamanho(); i++) {
+            T elem = recuperar(i);
+            if(elem != null && elem.equals(elemento))
+                return true;
+        }
+        return false;
+    }
+
+    public int indice (T elemento) {
+        for(int i = 0; i < tamanho(); i++) {
+            T elem = recuperar(i);
+            if(elem != null && elem.equals(elemento))
+                return i;
+        }
+        return -1;
+    }
+
+    public int tamanho() {
+        return this.elementos.length;
+    }
+
     public T recuperar(int posicao) {
+        if(posicao >= tamanho())
+            throw new IllegalArgumentException(String.format("A posição %d é inválida", posicao));
         return (T)this.elementos[posicao];
     }
 }

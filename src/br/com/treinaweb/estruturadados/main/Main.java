@@ -57,22 +57,39 @@ public class Main {
 		vetorPessoas.inserir(new Pessoa(2, "Jimmy page no vetor"));
 		vetorPessoas.inserir(new Pessoa(3, "Joe Satriani no vetor"));
 		vetorPessoas.inserir(new Pessoa(4, "Eric Clapton no vetor"));
-		vetorPessoas.inserirEm(2, new Pessoa(5, "Tom Morello no vetor"));
-		System.out.println(vetorPessoas);
+		vetorPessoas.inserirEm(1, new Pessoa(5, "Tom Morello no vetor"));
+		System.out.println(vetorPessoas); //essa posicao 1 equivale ao 2o elemento do vetor
 
 		//exemplo com inteiros
 		Vetor<Integer> vetorInteiros = new Vetor<Integer>(2);
 		vetorInteiros.inserirEm(0, 2020);
 		System.out.println(vetorInteiros.recuperar(0));
 
+		System.out.println("Lista de pessoas: ");
+		for(int i = 0; i < vetorPessoas.tamanho(); i++) {
+			System.out.println(vetorPessoas.recuperar(i).getNome());
+		}
+
+		System.out.println("**********************************");
+
+		Pessoa p1 = vetorPessoas.recuperar(1);
+		System.out.println(p1);
+		System.out.println(vetorPessoas.contem(p1));
+		System.out.println(vetorPessoas.indice(p1));
+
+		Pessoa pessoaErrada = new Pessoa(13, "Giovana Pinheiro não está no vetor");
+		System.out.println(pessoaErrada);
+		System.out.println(vetorPessoas.contem(pessoaErrada));
+		System.out.println(vetorPessoas.indice(pessoaErrada));
+
 
 		//testes de inicialização
-		int [] vetorInteiro = new int [3];
-		System.out.println("O valor padrão para inteiros quando não foram inicializados: " + vetorInteiro[0]);
-		boolean [] vetorBooleans = new boolean[3];
-		System.out.println("O valor padrão para booleanos quando não foram inicializados: " + vetorBooleans[0]);
-		String [] vetorString = new String[3];
-		System.out.println("O valor padrão para strings quando não foram inicializadas: " + vetorString[0]);
+//		int [] vetorInteiro = new int [3];
+//		System.out.println("O valor padrão para inteiros quando não foram inicializados: " + vetorInteiro[0]);
+//		boolean [] vetorBooleans = new boolean[3];
+//		System.out.println("O valor padrão para booleanos quando não foram inicializados: " + vetorBooleans[0]);
+//		String [] vetorString = new String[3];
+//		System.out.println("O valor padrão para strings quando não foram inicializadas: " + vetorString[0]);
 
 	}
 }
