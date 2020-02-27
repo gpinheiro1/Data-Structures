@@ -85,6 +85,7 @@ public class Main {
 		System.out.println(vetorPessoas);
 
 
+
 		//testes de inicialização
 //		int [] vetorInteiro = new int [3];
 //		System.out.println("O valor padrão para inteiros quando não foram inicializados: " + vetorInteiro[0]);
