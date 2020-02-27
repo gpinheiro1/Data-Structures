@@ -81,6 +81,8 @@ public class Main {
 		System.out.println(pessoaErrada);
 		System.out.println(vetorPessoas.contem(pessoaErrada));
 		System.out.println(vetorPessoas.indice(pessoaErrada));
+		vetorPessoas.remover(p1);
+		System.out.println(vetorPessoas);
 
 
 		//testes de inicialização
